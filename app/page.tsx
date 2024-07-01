@@ -1,10 +1,12 @@
 "use client"
 
+import Navbar from "./components/narbav"
+
 
 export default function HomePage() {
   return (
     <div>
-      <p>hello</p>
+      <Navbar/>
     </div>
   )
 }
