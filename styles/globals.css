@@ -24,10 +24,10 @@
     --card-foreground: #2d7d40;
 
     --primary: #2d7d40;
-    --primary-foreground: #0d271c;
+    --primary-foreground: #fff;
 
     --secondary: #f4a952;
-    --secondary-foreground: #0d271c;
+    --secondary-foreground: #2d7d40;
 
     --accent: #fff;
     --accent-foreground: 222.2 47.4% 11.2%;
@@ -62,7 +62,7 @@
     --primary: #7d2d6a;
     --primary-foreground: #fff;
 
-    --secondary:#a852f4 ;
+    --secondary:#0d0216 ;
     --secondary-foreground: #fff;
 
     --destructive: 0 63% 31%;
