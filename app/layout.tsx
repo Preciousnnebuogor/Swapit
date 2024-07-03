@@ -1,6 +1,8 @@
 import "@/styles/globals.css";
 import { TailwindIndicator, ThemeProvider } from "@/comps";
 import { Provider } from "ethers";
+import Navbar from "./components/narbav";
+import Footer from "./components/footer";
 import { siteConfig } from "@/lib";
 import { Metadata } from "next";
 
@@ -46,10 +48,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
-              
+                   <Navbar/>
               {/* <SiteHeader /> */}
               <div className="flex-1">{children}</div>
-            
+                 <Footer/>
             </div>
             {/* <TailwindIndicator /> */}
           </ThemeProvider>
