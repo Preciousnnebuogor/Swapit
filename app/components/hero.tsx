@@ -17,7 +17,7 @@ export default function Hero() {
         SWAPIT is a highly-secure crypto platform to buy, and sell CUSD, and
         other cryptocurrencies at the best rates.
       </h2>
-      <div className={`flex items-center justify-center mt-4 `}>
+      <div className={`flex items-center justify-center mt-4 mb-3`}>
         <button
           className={`bg-primary text-primary-foreground rounded-full py-4 px-8`}
           onClick={() => router.push("/login")}
