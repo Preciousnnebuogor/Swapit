@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/comps"
 export default function Navbar() {
   
   return (
-    <div className={" fixed top-0 w-screen bg-background text-foreground px-4"}>
+    <div className={" fixed top-0 w-screen bg-background text-foreground px-5"}>
       <div className={"flex justify-between items-center w-full"}>
         <div className={"px-4 py-2 "}>
           <div className="flex justify-start items-center">
