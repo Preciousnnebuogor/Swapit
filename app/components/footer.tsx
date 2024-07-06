@@ -32,7 +32,7 @@ export default function Footer() {
           >
             About
           </Link>
-          <Link href={""} className={" hover:text-secondary p-4 text-secondary-foreground"}>
+          <Link href={"/about"} className={" hover:text-secondary p-4 text-secondary-foreground"}>
             Login
           </Link>
         </div>
