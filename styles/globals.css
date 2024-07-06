@@ -20,8 +20,8 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
 
-    --card: #fff;
-    --card-foreground: #2d7d40;
+    --card: #2d7d40;
+    --card-foreground: #f4a952;
 
     --primary: #2d7d40;
     --primary-foreground: #fff;
@@ -56,11 +56,11 @@
     --border: 216 34% 17%;
     --input: 216 34% 17%;
 
-    --card: #fff;
-    --card-foreground: #080b0a;
+    --card: #2d7d40;
+    --card-foreground: #FFFF00;
 
     --primary: #2d7d40;
-    --primary-foreground: #ffff00;
+    --primary-foreground: #ffff;
 
     --secondary:#FFFF00;
     --secondary-foreground: #fff;

@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className={"px-4 py-2 "}>
           <div className="flex justify-start items-center">
             <img src={"./icon.png"} className={" h-14 w-14"} />
-            <p className="text-xl font-bold">SWAPIT</p>
+            <p className="text-xl text-card-foreground font-bold">SWAPIT</p>
           </div>
         </div>
         <ThemeToggle />

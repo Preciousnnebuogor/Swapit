@@ -19,7 +19,7 @@ export default function Hero() {
       </h2>
       <div className={`flex items-center justify-center mt-4 mb-3`}>
         <button
-          className={`bg-primary text-primary-foreground rounded-full py-4 px-8`}
+          className={`bg-primary text-card-foreground rounded-full py-4 px-8`}
           onClick={() => router.push("/login")}
         >
           SWAP NOW
