@@ -20,7 +20,7 @@ export default function Footer() {
             Buy/Sell
           </Link>
           <Link
-            href={"/"}
+            href={"/client"}
             className={" hover:text-secondary p-4 text-secondary-foreground"}
           >
             About

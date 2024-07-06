@@ -18,12 +18,7 @@ export default function Hero() {
         other cryptocurrencies at the best rates.
       </h2>
       <div className={`flex items-center justify-center mt-4 mb-3`}>
-        <button
-          className={`bg-primary text-card-foreground rounded-full py-4 px-8`}
-          onClick={() => router.push("/login")}
-        >
-          SWAP NOW
-        </button>
+        
       </div>
     </div>
   )
