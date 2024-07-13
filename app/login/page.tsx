@@ -49,9 +49,9 @@ export default function Login() {
             }}
             value={nairaValue}
           />
-          <div className={`flex justify-between items-center space-x-2 `}>
+          <div className={`flex justify-between items-center space-x-2 pr-6 `}>
             <img src="/nig.png" className={"h-[20px] w-[20px] "} />
-            <p>NGN</p>
+            <p className={``}>NGN</p>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ export default function Login() {
             }}
             value={celoValue}
           />
-          <div className={`flex justify-between items-center space-x-2  `}>
+          <div className={`flex justify-between items-center space-x-2 pr-6 `}>
             <img src="/celo.png" className={"h-[20px] w-[20px] "} />
             <p>CUSD</p>
           </div>
