@@ -17,11 +17,11 @@ export default function Hero() {
         SWAPIT is a highly-secure crypto platform to buy, and sell CUSD, and
         other cryptocurrencies at the best rates.
       </h2>
-      <div className={`flex items-center justify-between px-4`}>
-        <img src="/celo.png" className={"h-[20px] w-[20px] "} />
-        <img src="/naira2.png" className={"h-[20px] w-[20px] "} />
-        <img src="/cusd1.png" className={"h-[20px] w-[20px] "} />
-        <img src="/celo.png" className={"h-[20px] w-[20px] "} />
+      <div className={`flex items-center justify-between px-6 mt-6`}>
+        <img src="/celo.png" className={"h-[50px] w-[50px] "} />
+        <img src="/naira2.png" className={"h-[60px] w-[60px] "} />
+        <img src="/cusd1.png" className={"h-[50px] w-[50px] "} />
+        <img src="/celo.png" className={"h-[50px] w-[50px] "} />
 
       </div>
     </div>
