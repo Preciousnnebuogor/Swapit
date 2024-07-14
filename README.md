@@ -1,4 +1,4 @@
-# foodie
+# SwapIt
 This Project is for Celo Hackathon
 
 ![img](./public/home.png)

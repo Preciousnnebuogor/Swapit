@@ -10,7 +10,7 @@ export default function Login() {
   return (
     <div className={` px-4 `}>
       <form
-        className={` border-2 rounded-lg bg-background w-full mt-[25%] px-8 pb-4`}
+        className={` border-2 rounded-lg bg-background w-full mt-[35%] px-8 pb-4`}
       >
         <div
           className={`mt-8 flex items-center justify-between text-foreground font-bold text-xl`}
@@ -49,7 +49,7 @@ export default function Login() {
             }}
             value={nairaValue}
           />
-          <div className={`flex justify-between items-center pr-6 `}>
+          <div className={`flex justify-between items-center space-x-2 pr-6 `}>
             <img src="/nig.png" className={"h-[20px] w-[20px] "} />
             <p className={``}>NGN</p>
           </div>
@@ -72,7 +72,7 @@ export default function Login() {
             }}
             value={celoValue}
           />
-          <div className={`flex justify-between items-center pr-6 `}>
+          <div className={`flex justify-between items-center space-x-2 pr-6 `}>
             <img src="/celo.png" className={"h-[20px] w-[20px] "} />
             <p>CUSD</p>
           </div>
