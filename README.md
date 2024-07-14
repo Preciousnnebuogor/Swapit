@@ -1,6 +1,6 @@
 # SwapIt
 
-This Project is for Celo Hackathon
+This Project is for Celo Hackathon Season 7
 
 ![img](./public/homed.png)
 
@@ -55,7 +55,7 @@ This project was made using Next.js for the frontend. Connectiing with my smart 
 ![img](./public/homel.png)
 ![img](./public/a.png)
 ![img](./public/ab.png)
-![img](./public/img2b.jpg)
+
 
 ### Links
 
