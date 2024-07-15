@@ -13,9 +13,9 @@ export default function Login() {
   const [isBuy, setIsBuy] = useState(true)
   const [nairaValue, setNairaValue] = useState<string>("")
   const [celoValue, setCeloValue] = useState("")
-  if (!address) {
-    return <h2>Loading...</h2>
-  }
+  // if (!address) {
+  //   return <h2>Loading...</h2>
+  // }
   return (
     <div className={` px-4 `}>
       <div
@@ -89,7 +89,7 @@ export default function Login() {
             <img src="/nig.png" className={"h-[20px] w-[20px] "} />
             <p className={``}>NGN</p>
           </div>
-        </div> here
+        </div> 
         <div className={`flex items-center justify-center mt-10 mx-8`}>
           <button
             onClick={() => {
