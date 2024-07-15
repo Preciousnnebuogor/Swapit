@@ -1,23 +1,20 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { ThemeToggle } from "@/comps";
-import { ContractFn } from "../contractFunction";
+import { useEffect, useState } from "react"
+import Link from "next/link"
+import { ThemeToggle } from "@/comps"
 
-
-
-
+import { ContractFn } from "../contractFunction"
 
 export default function Navbar() {
   const [hideConnectBtn, setHideConnectBtn] = useState(false)
-  
-                 useEffect(() => {
+
+  useEffect(() => {
     if (window.ethereum && window.ethereum.isMiniPay) {
       // User is using MiniPay so hide connect wallet button.
       setHideConnectBtn(true)
 
-         //connect({ connector: injected({ target: "metaMask" }) })
+      //connect({ connector: injected({ target: "metaMask" }) })
     }
   }, [])
 
