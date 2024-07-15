@@ -1,15 +1,24 @@
 "use client"
 
 import { useState } from "react"
+import { useAccount } from "wagmi"
+
+import { useMinipay } from "../contract/miniPay"
+import { transferCusdTokens } from "../contract/transferCusd"
+import { ContractFn } from "../contractFunction"
 
 export default function Login() {
+  const { address } = useAccount()
+  // const { walletAddress } = useMinipay()
   const [isBuy, setIsBuy] = useState(true)
   const [nairaValue, setNairaValue] = useState<string>("")
   const [celoValue, setCeloValue] = useState("")
-
+  if (!address) {
+    return <h2>Loading...</h2>
+  }
   return (
     <div className={` px-4 `}>
-      <form
+      <div
         className={` border-2 rounded-lg bg-background w-full mt-[35%] px-8 pb-4`}
       >
         <div
@@ -33,35 +42,12 @@ export default function Login() {
           </h1>
         </div>
         <div className={`mt-8 mb-2`}>
-          <label className={` text-primary font-normal text-xl`}>Pay Now</label>
+          <label className={` text-primary font-normal text-xl`}>Buy Now</label>
         </div>
         <div
           className={`flex items-center justify-between border rounder-md py-3 px-1`}
         >
-          <input
-            type="number"
-            className={` bg-background border-none outline-none text-card px-2`}
-            onChange={(e) => {
-              setNairaValue(e.target.value)
-              const exchange = parseInt(e.target.value) / 1500
-              setCeloValue(exchange.toString())
-              console.log(nairaValue)
-            }}
-            value={nairaValue}
-          />
-          <div className={`flex justify-between items-center space-x-2 pr-6 `}>
-            <img src="/nig.png" className={"h-[20px] w-[20px] "} />
-            <p className={``}>NGN</p>
-          </div>
-        </div>
-
-        <div className={`mt-4 mb-2`}>
-          <label className={`text-primary font-normal text-xl`}>Buy Now</label>
-        </div>
-        <div
-          className={`flex items-center justify-between border rounder-md py-3 px-1`}
-        >
-          <input
+         <input
             type="text"
             className={`bg-background border-none outline-none text-card px-2`}
             onChange={(e) => {
@@ -76,9 +62,47 @@ export default function Login() {
             <img src="/celo.png" className={"h-[20px] w-[20px] "} />
             <p>CUSD</p>
           </div>
+
         </div>
+
+        <div className={`mt-4 mb-2`}>
+          <label className={`text-primary font-normal text-xl`}>Pay Now</label>
+        </div>
+        <div
+          className={`flex items-center justify-between border rounder-md py-3 px-1`}
+        >
+          
+
+           <input
+            type="number"
+            className={` bg-background border-none outline-none text-card px-2`}
+            onChange={(e) => {
+              setNairaValue(e.target.value)
+              const exchange = parseInt(e.target.value) / 1500
+              setCeloValue(exchange.toString())
+              console.log(nairaValue)
+            }}
+            value={nairaValue}
+          />
+          
+          <div className={`flex justify-between items-center space-x-2 pr-6 `}>
+            <img src="/nig.png" className={"h-[20px] w-[20px] "} />
+            <p className={``}>NGN</p>
+          </div>
+        </div> here
         <div className={`flex items-center justify-center mt-10 mx-8`}>
           <button
+            onClick={() => {
+              console.log(address)
+              transferCusdTokens({
+                env: "CUSD_TESTNET",
+                userAddress: address!,
+                to: "0x462E5F272B8431562811126779da6EcaE51A5B40",
+                // amount: 4,
+                amount: parseInt(celoValue),
+              })
+              //ContractFn.deposit(address!, parseInt(celoValue))
+            }}
             className={`text-white font-bold text-xl w-full py-4 rounded-lg 
             ${
               isBuy
@@ -89,7 +113,7 @@ export default function Login() {
             {isBuy ? "Buy" : "Sell"}
           </button>
         </div>
-      </form>
+      </div>
       <div className={`flex items-center justify-center mt-6`}>
         <p>
           <span className={`text-primary font-extrabold`}>NGN</span>{" "}
@@ -107,8 +131,6 @@ export default function Login() {
           in our services. Let's keep growing and winning together!`}
         </h2>
       </div>
-
-      
     </div>
   )
 }

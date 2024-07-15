@@ -2,10 +2,10 @@ import "@/styles/globals.css"
 import { Metadata } from "next"
 import { TailwindIndicator, ThemeProvider } from "@/comps"
 import { siteConfig } from "@/lib"
-import { Provider } from "ethers"
 
 import Footer from "./components/footer"
 import Navbar from "./components/narbav"
+import Provider from "./provider"
 
 export const metadata: Metadata = {
   title: {
@@ -38,15 +38,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
           //fontSans.variable
         }
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative flex min-h-screen flex-col">
-            <Navbar />
-            {/* <SiteHeader /> */}
-            <div className="flex-1">{children}</div>
-            <Footer />
-          </div>
-          {/* <TailwindIndicator /> */}
-        </ThemeProvider>
+        <Provider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <div className="relative flex min-h-screen flex-col">
+              <Navbar />
+              {/* <SiteHeader /> */}
+              <div className="flex-1">{children}</div>
+              <Footer />
+            </div>
+            {/* <TailwindIndicator /> */}
+          </ThemeProvider>
+        </Provider>
       </body>
     </html>
   )
